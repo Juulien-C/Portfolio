@@ -1,0 +1,55 @@
+*, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(43, 39, 39);
+    color: white;
+}
+
+span{
+    font-size: 22px;
+}
+
+h2{
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
+
+.flex{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 2px solid rgb(153, 153, 153);
+    border-bottom: 2px solid rgb(153, 153, 153);
+    align-items: center;
+    padding: 15px;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+.skills{
+    padding: 10px;
+    font-size: 70px;
+}
+
+.test1{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.trait{
+    width: 200px;
+    height: 2px;
+    background-color: rgba(240, 241, 144, 0.9);
+}
+
+.trait1{
+    width: 2px;
+    height: 150px;
+    background-color: royalblue;
+}
