@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio Julien Cantenot</title>
 </head>
 <body>
     <div class='main'>
         <div class="flex">
-            <h2>Je suis un titre</h2>
-            <h2>Je suis un titre</h2>
-            <h2>Je suis un titre</h2>
+            <h2>Compétences</h2>
+            <h2>Portfolio</h2>
+            <h2>Contact</h2>
         </div>
         <div>
             <h3>Je suis un titre</h3>
@@ -28,34 +28,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
-
-    <script>
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(".skills", {scrollTrigger:{
-            trigger:".skills",
-            markers: true,
-            start: "-450px center",
-            end: "bottom 100px",
-            scrub: true,
-            toggleActions : "restart pause reverse pause"
-        }, 
-            x: 2000, 
-            duration: 5,
-            ease: "none",
-        });
-
-        gsap.from(".trait", {scrollTrigger:{
-            trigger: ".trait",
-            markers: true,
-            toggleActions : "restart pause reverse pause",
-            scrub: true,
-        },
-        x: -150, 
-        duration: 5, 
-        ease: "none",});
-
-    </script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
