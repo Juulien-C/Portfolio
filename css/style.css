@@ -1,55 +1,115 @@
-*, body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(43, 39, 39);
-    color: white;
+.header {
+  height: 100vh;
+  border-bottom: 1px solid #ffffff;
 }
 
-span{
-    font-size: 22px;
+.header__menu {
+  background-color: #525151;
+  width: 50%;
+  margin: 0 auto;
 }
 
-h2{
-    writing-mode: vertical-rl;
-    transform: rotate(-180deg);
+.header__menu__ul {
+  background-color: #525151;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
 }
 
-.flex{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-right: 2px solid rgb(153, 153, 153);
-    border-bottom: 2px solid rgb(153, 153, 153);
-    align-items: center;
-    padding: 15px;
+.header__menu__ul li {
+  padding: 0.7rem 6.4rem;
+  background-color: #525151;
 }
 
-.main{
-    display: flex;
-    height: 100vh;
-    border-bottom: 2px solid rgb(153, 153, 153);
+.skills {
+  padding: 10px;
+  font-size: 7rem;
 }
 
-.skills{
-    padding: 10px;
-    font-size: 70px;
+.test1 {
+  overflow: hidden;
+  height: 100vh;
 }
 
-.test1{
-    overflow: hidden;
-    height: 100vh;
+.trait {
+  width: 200px;
+  height: 2px;
+  background-color: rgba(240, 241, 144, 0.9);
 }
 
-.trait{
-    width: 200px;
-    height: 2px;
-    background-color: rgba(240, 241, 144, 0.9);
+.trait1 {
+  width: 2px;
+  height: 150px;
+  background-color: royalblue;
 }
 
-.trait1{
-    width: 2px;
-    height: 150px;
-    background-color: royalblue;
+html {
+  font-size: 62.5%;
 }
+
+*, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #464545;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: clamp(3.2rem, 5vw, 7.2rem);
+}
+
+h3 {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+}
+
+p, span, li, a {
+  font-family: 'Hind Madurai', sans-serif;
+}
+
+p, li, a {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+}
+
+span {
+  font-size: clamp(1.2rem, 2vw, 1rem);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: inherit;
+}
+
+button {
+  border: 2px solid #5BC2E2;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  margin: 15px 0px;
+}
+
+button:hover {
+  background-color: #5BC2E2;
+  border: 2px solid #5BC2E2;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+/*# sourceMappingURL=style.css.map */

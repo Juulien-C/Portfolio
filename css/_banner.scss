@@ -1,0 +1,31 @@
+.header{
+    height: 100vh;
+    border-bottom: 1px solid $white;
+
+    &__menu{
+        background-color: $darkGrey;
+        width: 50%;
+        margin: 0 auto;
+
+        &__ul{
+            background-color: $darkGrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+    
+            li{
+                padding: 0.7rem 6.4rem;
+                background-color: $darkGrey;
+            }
+        }
+    }
+
+
+}
+
+// h2{
+//     writing-mode: vertical-rl;
+//     transform: rotate(-180deg);
+// }
+

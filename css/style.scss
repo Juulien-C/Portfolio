@@ -1,0 +1,64 @@
+@import './colors';
+@import './mixins';
+@import "./banner";
+@import './skills';
+
+
+html {
+    font-size: 62.5%;
+  }
+
+*, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+    color: $white;
+}
+
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    // @include font-size(7.2);
+    font-size: clamp(3.2rem, 5vw, 7.2rem);
+}
+h3{
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+}
+
+p, span, li, a{
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+p, li, a{
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+}
+
+span{
+    font-size: clamp(1.2rem, 2vw, 1rem);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    background-color: inherit;
+}
+
+button{
+    border: 2px solid $blue;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    margin: 15px 0px;
+
+    &:hover{
+        background-color: $blue;
+        border: 2px solid $blue;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
