@@ -1,3 +1,11 @@
+const tl = gsap.timeline({defaults: {ease: "power1.out"}});
+
+tl.to(".header__banner__text--hide--txt", {y: "0%", duration: 1.5, stagger: 0.25});
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".skills", {scrollTrigger:{
