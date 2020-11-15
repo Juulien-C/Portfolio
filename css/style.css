@@ -1,10 +1,10 @@
 .header {
   height: 100vh;
-  border-bottom: 1px solid #ffffff;
   position: relative;
 }
 
 .header__menu {
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
 
 .header__scroll {
   position: absolute;
-  left: 50%;
+  left: 43%;
   bottom: 0%;
   -webkit-transform: translate(-50%, -25%);
           transform: translate(-50%, -25%);
@@ -146,7 +146,7 @@
   height: 600px;
   background-color: khaki;
   margin-top: 80px;
-  margin-left: -80px;
+  margin-left: -70px;
   z-index: 10;
   max-width: 100%;
 }
@@ -187,26 +187,30 @@
   }
 }
 
-.skills {
-  padding: 10px;
-  font-size: 7rem;
+@media screen and (max-width: 768px) {
+  .header__menu {
+    width: 100%;
+  }
+  .header__menu__ul {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
 }
 
-.test1 {
+.skills {
   overflow: hidden;
   height: 100vh;
 }
 
-.trait {
-  width: 200px;
-  height: 2px;
-  background-color: rgba(240, 241, 144, 0.9);
+.skills__title {
+  padding: 30px 0;
+  font-size: clamp(4rem, 7vw, 7rem);
 }
 
-.trait1 {
-  width: 2px;
-  height: 150px;
-  background-color: royalblue;
+.skills__line {
+  width: clamp(300px, 10vw, 500px);
+  height: 2px;
+  background-color: #ffffff;
 }
 
 html {
@@ -223,6 +227,12 @@ html {
 }
 
 h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: clamp(3.2rem, 5vw, 6.4rem);
+}
+
+h2 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   font-size: clamp(3.2rem, 5vw, 7.2rem);
@@ -266,5 +276,9 @@ button:hover {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.separateur {
+  margin: 100px;
 }
 /*# sourceMappingURL=style.css.map */

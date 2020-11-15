@@ -1,6 +1,7 @@
 const tl = gsap.timeline({defaults: {ease: "power1.out"}});
 
 tl.to(".header__banner__text--hide--txt", {y: "0%", duration: 1.5, stagger: 0.25});
+tl.fromTo(".header__banner__text--btn", {opacity: "0%", duration: 1, y:"-30px"},{opacity: "100%", y:"0px"});
 
 
 
@@ -8,8 +9,8 @@ tl.to(".header__banner__text--hide--txt", {y: "0%", duration: 1.5, stagger: 0.25
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".skills", {scrollTrigger:{
-    trigger:".skills",
+gsap.from(".skills__title", {scrollTrigger:{
+    trigger:".skills__title",
     markers: true,
     start: "-450px center",
     end: "bottom 100px",
@@ -21,8 +22,8 @@ gsap.from(".skills", {scrollTrigger:{
     ease: "none",
 });
 
-gsap.from(".trait", {scrollTrigger:{
-    trigger: ".trait",
+gsap.from(".skills__line", {scrollTrigger:{
+    trigger: ".skills__line",
     markers: true,
     toggleActions : "restart pause reverse pause",
     scrub: true,

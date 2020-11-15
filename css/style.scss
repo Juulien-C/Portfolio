@@ -21,8 +21,15 @@ h1{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
     // @include font-size(7.2);
+    font-size: clamp(3.2rem, 5vw, 6.4rem);
+}
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
     font-size: clamp(3.2rem, 5vw, 7.2rem);
 }
+
 h3{
     font-family: 'Istok Web', sans-serif;
     font-weight: bold;
@@ -57,4 +64,8 @@ button{
         transform: scale(1.05);
         transition: transform 0.3s ease;
     }
+}
+
+.separateur{
+    margin: 100px;
 }
