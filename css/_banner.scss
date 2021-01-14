@@ -1,15 +1,13 @@
 .header{
     height: 100vh;
-    // border-bottom: 1px solid $darkGrey;
     position: relative;
 
     &__menu{
-        // background-color: $darkGrey;
         width: 50%;
         margin: 0 auto;
 
         &__ul{
-            background-color: $darkGrey;
+            background-color: $darkBlue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,11 +15,19 @@
             margin-bottom: 50px;;
     
             li{
-                background-color: $darkGrey;
+                background-color: $darkBlue;
                 margin-top: clamp(0.5rem, 2vw, 0.7rem);
                 margin-right: clamp(3rem, 5vw, 6.4rem);
                 margin-bottom: clamp(0.5rem, 2vw, 0.7rem);
                 margin-left: clamp(3rem, 5vw, 6.4rem);
+
+                a{
+                    transition: all 0.3s linear;
+
+                    &:hover{
+                        color: $blue;
+                    }
+                }
             }
         }
     }
@@ -29,7 +35,7 @@
     
     &__scroll{        
         position: absolute;
-        left: 43%;
+        left: 50%;
         bottom: 0%;
         transform: translate(-50%,-25%);
         display: flex;
@@ -61,7 +67,7 @@
         }
 
         &__line{
-            background-color: $darkGrey;
+            background-color: $darkBlue;
             width: 2px;
             height: 55px;
             margin-left: 5px;
@@ -81,28 +87,52 @@
         }
 
     }
+
+    &::after{
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 338px;
+        height: 110px;
+        background-image: url('../img/patterns/pattern-2.svg');
+        background-repeat: no-repeat;
+    }
 }
 
 
 .header__banner{
     display: flex;
     justify-content: center;
-    align-items: flex-start ;
+    align-items: flex-end ;
     flex-wrap: wrap;
 
     &__text{
-        background-color: $darkGrey;
+        position: relative;
+        z-index: 10;
+        background-color: $darkBlue;
         padding-top: clamp(50px, 5vw, 150px);
         padding-right: clamp(50px, 5vw, 150px);
         padding-bottom: clamp(30px, 5vw, 50px);
         padding-left: clamp(30px, 5vw, 50px);
 
+        &::after{
+            content: " ";
+            position: absolute;
+            right: -300px;
+            top: 65px;
+            width: 300px;
+            height: 220px;
+            background-image: url('../img/patterns/pattern-1.svg');
+            z-index: -1;
+        }
+
         &--hide{
             overflow: hidden;
-            background-color: $darkGrey;
+            background-color: $darkBlue;
 
             span{                
-                background-color: $darkGrey;
+                background-color: $darkBlue;
                 transform: translateY(100%);
                 display: inline-block;
             }
@@ -110,29 +140,25 @@
 
         p{
             color: $blue;
-            background-color: $darkGrey;
+            background-color: $darkBlue;
             padding-bottom: 20px;
             font-family: 'Istok Web', sans-serif;
             font-size: clamp(2rem, 2vw, 3.3rem);
             font-weight: bold;
         }
 
-        button{
-            background-color: $darkGrey;
-            margin-top: 20px;
+        .bloc_rs{
+            a:last-of-type{
+                margin-left: 10px;
+            }
         }
     }
 
 
     &__img{
-        width: 700px;
-        height: 600px;
-        background-color: khaki;
-        margin-top: 80px;
+        margin-bottom: -80px;
         margin-left: -70px;
-        z-index: 10;
-        max-width: 100%;
-        // height: auto;
+        z-index: 15;
     }
 
 }

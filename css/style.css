@@ -9,7 +9,7 @@
 }
 
 .header__menu__ul {
-  background-color: #525151;
+  background-color: #373A55;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,16 +24,25 @@
 }
 
 .header__menu__ul li {
-  background-color: #525151;
+  background-color: #373A55;
   margin-top: clamp(0.5rem, 2vw, 0.7rem);
   margin-right: clamp(3rem, 5vw, 6.4rem);
   margin-bottom: clamp(0.5rem, 2vw, 0.7rem);
   margin-left: clamp(3rem, 5vw, 6.4rem);
 }
 
+.header__menu__ul li a {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.header__menu__ul li a:hover {
+  color: #5BC2E2;
+}
+
 .header__scroll {
   position: absolute;
-  left: 43%;
+  left: 50%;
   bottom: 0%;
   -webkit-transform: translate(-50%, -25%);
           transform: translate(-50%, -25%);
@@ -54,7 +63,7 @@
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   letter-spacing: 0.8px;
-  color: #464545;
+  color: #25283A;
   -webkit-text-stroke: 0.2px #5BC2E2;
   position: relative;
 }
@@ -74,7 +83,7 @@
 }
 
 .header__scroll__line {
-  background-color: #525151;
+  background-color: #373A55;
   width: 2px;
   height: 55px;
   margin-left: 5px;
@@ -93,6 +102,17 @@
           animation: scroll 3.5s infinite linear;
 }
 
+.header::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 338px;
+  height: 110px;
+  background-image: url("../img/patterns/pattern-2.svg");
+  background-repeat: no-repeat;
+}
+
 .header__banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,28 +120,41 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .header__banner__text {
-  background-color: #525151;
+  position: relative;
+  z-index: 10;
+  background-color: #373A55;
   padding-top: clamp(50px, 5vw, 150px);
   padding-right: clamp(50px, 5vw, 150px);
   padding-bottom: clamp(30px, 5vw, 50px);
   padding-left: clamp(30px, 5vw, 50px);
 }
 
+.header__banner__text::after {
+  content: " ";
+  position: absolute;
+  right: -300px;
+  top: 65px;
+  width: 300px;
+  height: 220px;
+  background-image: url("../img/patterns/pattern-1.svg");
+  z-index: -1;
+}
+
 .header__banner__text--hide {
   overflow: hidden;
-  background-color: #525151;
+  background-color: #373A55;
 }
 
 .header__banner__text--hide span {
-  background-color: #525151;
+  background-color: #373A55;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   display: inline-block;
@@ -129,26 +162,21 @@
 
 .header__banner__text p {
   color: #5BC2E2;
-  background-color: #525151;
+  background-color: #373A55;
   padding-bottom: 20px;
   font-family: 'Istok Web', sans-serif;
   font-size: clamp(2rem, 2vw, 3.3rem);
   font-weight: bold;
 }
 
-.header__banner__text button {
-  background-color: #525151;
-  margin-top: 20px;
+.header__banner__text .bloc_rs a:last-of-type {
+  margin-left: 10px;
 }
 
 .header__banner__img {
-  width: 700px;
-  height: 600px;
-  background-color: khaki;
-  margin-top: 80px;
+  margin-bottom: -80px;
   margin-left: -70px;
-  z-index: 10;
-  max-width: 100%;
+  z-index: 15;
 }
 
 @-webkit-keyframes scroll {
@@ -213,16 +241,19 @@
   background-color: #ffffff;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-*, body {
+*, ::before, ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #464545;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #25283A;
   color: #ffffff;
 }
 
@@ -258,24 +289,24 @@ li {
 a {
   text-decoration: none;
   background-color: inherit;
+  color: #ffffff;
 }
 
-button {
+.btn {
   border: 2px solid #5BC2E2;
   padding: 0.7rem 1.4rem;
   cursor: pointer;
-  margin: 15px 0px;
+  margin: 20px 0px;
+  background-color: #373A55;
 }
 
-button:hover {
+.btn:hover {
   background-color: #5BC2E2;
   border: 2px solid #5BC2E2;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .separateur {
