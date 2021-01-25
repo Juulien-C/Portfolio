@@ -135,6 +135,8 @@
                 background-color: $darkBlue;
                 transform: translateY(100%);
                 display: inline-block;
+                font-size: inherit;
+                font-family: inherit;
             }
         }
 

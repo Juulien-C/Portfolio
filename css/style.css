@@ -158,6 +158,8 @@
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 .header__banner__text p {
@@ -225,20 +227,154 @@
   }
 }
 
-.skills {
+.about {
   overflow: hidden;
-  height: 100vh;
 }
 
-.skills__title {
-  padding: 30px 0;
-  font-size: clamp(4rem, 7vw, 7rem);
+.about__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 80px 0px 80px 80px;
 }
 
-.skills__line {
-  width: clamp(300px, 10vw, 500px);
-  height: 2px;
-  background-color: #ffffff;
+.about__intro__text {
+  font-size: 1.125rem;
+  line-height: 2.1;
+  max-width: 50%;
+}
+
+.about__intro__patterns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.about__intro__patterns img {
+  width: 100%;
+  height: auto;
+}
+
+.about__intro__patterns img:nth-child(1) {
+  margin-bottom: 45px;
+}
+
+.about__intro__patterns img:nth-child(2) {
+  margin-right: 200px;
+}
+
+.about__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__skills .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #373A55;
+  padding: 12px;
+  margin: 10px 22px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.about__skills .box h3 {
+  font-size: 26px;
+  color: #5BC2E2;
+  font-family: 'Istok web', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about__skills .box__el {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 55px;
+  margin: 15px;
+}
+
+.about__skills .box__el span {
+  margin-left: 10px;
+}
+
+.about__skills .box__technos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 370px;
+  margin: 0 25px;
+}
+
+.about__skills .box__webdesign, .about__skills .box__other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 25px;
+}
+
+.projets {
+  overflow: hidden;
+}
+
+.contact {
+  overflow: hidden;
+}
+
+footer {
+  background: #373A55;
 }
 
 *, ::before, ::after {
@@ -274,12 +410,28 @@ h3 {
   font-weight: bold;
 }
 
+h4, h5 {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+h5 {
+  color: #5BC2E2;
+  font-size: 28px;
+}
+
 p, li, a {
   font-family: 'Hind Madurai', sans-serif;
 }
 
 p, li, a {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: 20px;
+}
+
+span {
+  font-size: 18px;
+  font-family: 'Hind Madurai';
 }
 
 li {
@@ -294,22 +446,35 @@ a {
 
 .btn {
   border: 2px solid #5BC2E2;
-  padding: 0.7rem 1.4rem;
+  padding: 1.2rem 1.8rem;
   cursor: pointer;
   margin: 20px 0px;
-  background-color: #373A55;
+  background-color: inherit;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .btn:hover {
   background-color: #5BC2E2;
   border: 2px solid #5BC2E2;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .separateur {
   margin: 100px;
+}
+
+.titleAnim {
+  padding: 30px 0;
+  margin-left: 80px;
+  font-size: clamp(4rem, 7vw, 7rem);
+}
+
+.lineAnim {
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
