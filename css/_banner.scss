@@ -147,13 +147,9 @@
             font-family: 'Istok Web', sans-serif;
             font-size: clamp(2rem, 2vw, 3.3rem);
             font-weight: bold;
+            opacity: 0 ;
         }
 
-        .bloc_rs{
-            a:last-of-type{
-                margin-left: 10px;
-            }
-        }
     }
 
 
@@ -184,7 +180,7 @@
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
     .header__menu{
         width: 100%;
         

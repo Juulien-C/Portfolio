@@ -1,3 +1,41 @@
 .contact{
     overflow: hidden;
+    height: 110vh;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateX(-50%);
+        background: url('../img/patterns/pattern-5.svg');
+        background-repeat: no-repeat;
+        width: 380px;
+        height: 380px;
+        display: block;
+    }
 }
+
+h5{
+    text-align: center;
+    margin: 100px auto;
+    line-height: 2;
+
+    .hand-emoji{
+        font-size: inherit;
+        display: inline-block;
+        transform: translateY(0px);
+        animation: emojis 1.5s ease-in-out infinite forwards;
+    }
+}
+
+@keyframes emojis {
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+

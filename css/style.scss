@@ -105,3 +105,32 @@ a{
     border-radius: 5px;
     background-color: $white;
 }
+
+.bloc_rs{
+
+    a{
+        opacity: 1;
+        display: inline-block;
+
+        .logo-rs circle, .logo-rs path{
+            transition: fill 0.5s ease-in-out;
+        }
+    }
+
+    a:hover .logo-rs circle{
+        fill: $darkBlue;
+    }
+    a:hover .logo-rs path{
+        fill: $white;
+    }
+    a:first-of-type:hover .logo-rs circle{
+        fill: $white;
+    }
+    a:first-of-type:hover .logo-rs path{
+        fill: $darkBlue;
+    }
+
+    a:last-of-type{
+        margin-left: 10px;
+    }
+}

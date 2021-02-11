@@ -1,3 +1,33 @@
 footer{
     background: $darkBlue;
+    padding: 50px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    .f-left{
+        padding: 10px;
+        margin-right: 50px;
+
+        p{
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+
+        span{
+            display: block;
+            line-height: 1.6;
+        }
+    }
+
+    .f-right{
+        padding: 10px;
+        margin-left: 50px;
+
+        p{
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+    }
 }
