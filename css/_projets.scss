@@ -69,3 +69,24 @@
     }
 
 }
+
+@media screen and (max-width: 1250px){
+    .projet{
+        &__line{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1150px){
+    .projet{
+        margin: 70px 0;
+
+        &__contenu{
+            max-width: 600px;
+            margin: 0 15px 20px;
+        }
+        img{
+            max-width: 600px;
+        }
+    }
+}

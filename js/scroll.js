@@ -1,9 +1,12 @@
 const tl = gsap.timeline({defaults: {ease: "power1.out"}});
 const tl2 = gsap.timeline({defaults: {ease: "power1.out"}});
+const lineProjet = document.querySelectorAll('.projet__line');
+const projet = document.querySelectorAll('.projet');
+
 
 tl
     .fromTo(".header__banner__text p", {opacity: "0%", duration: 0.7, y:"-50px"},{opacity: "100%", duration: 1.5, y:"0px"})
-    .to(".header__banner__text--hide--txt", {y: "0%", duration: 1.2, stagger: 0.25}, "-=0.5")
+    .to(".header__banner__text--hide--txt", {y: "0%", opacity: 1, duration: 1.2, stagger: 0.25}, "-=0.5")
     .fromTo(".header__banner__text--btn", {opacity: "0%", duration: 1, y:"-30px"},{opacity: "100%", y:"0px"})
     .fromTo(".header__banner .bloc_rs a", {opacity: "0%", duration: 1},{opacity: "100%", stagger: 0.25});
 
@@ -51,6 +54,7 @@ gsap.from(".about__intro__text", {scrollTrigger:{
     ease: "Power3.easeInOut" ,
     opacity: 0
 });
+
 gsap.from(".about__intro__img", {scrollTrigger:{
     trigger: ".about__intro__patterns",
     // markers: true,
@@ -62,6 +66,7 @@ gsap.from(".about__intro__img", {scrollTrigger:{
     opacity: 0,
     stagger: 0.25,
 });
+
 gsap.from(".box", {scrollTrigger:{
     trigger: ".box",
     markers: true,
@@ -73,7 +78,6 @@ gsap.from(".box", {scrollTrigger:{
     opacity: 0,
     stagger: 0.25,
 });
-
 
 
 gsap.from(".projets__title", {scrollTrigger:{
@@ -98,6 +102,19 @@ gsap.from(".projets__line", {scrollTrigger:{
     duration: 5, 
     ease: "none",
 });
+
+lineProjet.forEach(line =>{
+    gsap.from(line, {scrollTrigger:{
+        trigger: line,
+        markers: true,
+        start: "top center"
+        },
+        x: "-50px",
+        duration: 2,
+        ease: "Power3.easeInOut" ,
+        opacity: 0
+    });
+})
 
 gsap.from(".contact__title", {scrollTrigger:{
     trigger:".contact__title",

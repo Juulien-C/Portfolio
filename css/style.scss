@@ -134,3 +134,39 @@ a{
         margin-left: 10px;
     }
 }
+
+@media screen and (max-width:1350px){
+    p{
+        font-size: 18px;
+    }
+    a{
+        font-size: 16px;
+    }
+    
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 768px){  
+    .separateur{
+        margin: 50px
+    } 
+
+    .titleAnim{
+        margin-left: 30px;
+    }
+
+    .lineAnim{
+        width: 220px;
+    }
+
+    .bloc_rs{
+        svg{
+            width: 40px;
+            height: auto;
+        }
+    }
+}

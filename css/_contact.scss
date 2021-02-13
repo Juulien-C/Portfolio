@@ -39,3 +39,11 @@ h5{
     }
 }
 
+@media screen and (max-width: 768px){
+    .contact{
+
+        &::after{
+            display: none;
+        }
+    }
+}
