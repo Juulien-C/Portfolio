@@ -1,15 +1,18 @@
-.header {
-  height: 100vh;
-  position: relative;
-}
-
-.header__menu {
+.nav__menu {
   width: 50%;
   margin: 0 auto 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #373A55;
 }
 
-.header__menu__ul {
-  background-color: #373A55;
+.nav__menu__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,26 +25,31 @@
   padding: 20px;
 }
 
-.header__menu__ul li {
+.nav__menu__ul li {
   background-color: #373A55;
-  margin: 0.7rem 6.4rem;
+  margin: 0.7rem 5.4rem;
 }
 
-.header__menu__ul li a {
+.nav__menu__ul li a {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
-.header__menu__ul li a:hover {
+.nav__menu__ul li a:hover {
   color: #5BC2E2;
+}
+
+.header {
+  height: 86vh;
+  position: relative;
 }
 
 .header__scroll {
   position: absolute;
   left: 50%;
   bottom: 0%;
-  -webkit-transform: translate(-50%, -25%);
-          transform: translate(-50%, -25%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,11 +212,11 @@
     right: -250px;
     width: 250px;
   }
-  .header__menu {
+  .nav__menu {
     width: 100%;
     margin-bottom: 50px;
   }
-  .header__menu__ul {
+  .nav__menu__ul {
     padding: 15px;
   }
 }
@@ -216,9 +224,6 @@
 @media screen and (max-width: 768px) {
   .separateur {
     margin: 50px;
-  }
-  .header {
-    height: 85vh;
   }
   .header::after {
     width: 240px;
@@ -241,17 +246,17 @@
 }
 
 @media screen and (max-width: 650px) {
+  .nav__menu {
+    margin-bottom: 20px;
+  }
+  .nav__menu__ul li {
+    margin: 15px 25px;
+  }
   .header {
-    height: 100vh;
+    height: 89vh;
   }
   .header::after {
     display: none;
-  }
-  .header__menu {
-    margin-bottom: 20px;
-  }
-  .header__menu__ul li {
-    margin: 15px 25px;
   }
   .header__banner__text {
     padding: 35px 60px;
@@ -467,6 +472,12 @@
   .about__intro__patterns {
     display: none;
   }
+  .about__skills .box__technos {
+    margin: 0 15px;
+  }
+  .about__skills .box__el {
+    margin: 8px;
+  }
 }
 
 .projets {
@@ -652,9 +663,14 @@ footer {
           align-items: flex-start;
 }
 
+footer .f-logo {
+  margin-right: 50px;
+  padding: 10px;
+}
+
 footer .f-left {
   padding: 10px;
-  margin-right: 50px;
+  margin: 0 50px;
 }
 
 footer .f-left p {
@@ -685,17 +701,32 @@ footer .f-right p {
 }
 
 @media screen and (max-width: 650px) {
+  footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .f-logo {
+    width: 100%;
+    margin-right: 25px;
+    display: block;
+  }
   footer .f-left {
-    margin-right: 0px;
+    margin: 20px 0px 0px 0px;
   }
   footer .f-left span, footer .f-left p {
     font-size: 16px;
   }
   footer .f-right {
-    margin-left: 25px;
+    margin: 20px 0px 0px 0px;
   }
   footer .f-right span, footer .f-right p {
     font-size: 16px;
+  }
+  footer .f-right p {
+    margin-bottom: 20px;
   }
 }
 
@@ -708,6 +739,7 @@ footer .f-right p {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -839,6 +871,12 @@ a {
   }
   .btn {
     padding: 1rem 1.5rem;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  p {
     font-size: 16px;
   }
 }

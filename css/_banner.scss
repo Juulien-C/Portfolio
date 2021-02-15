@@ -1,13 +1,12 @@
-.header{
-    height: 100vh;
-    position: relative;
-
-    &__menu{
+.nav__menu{
         width: 50%;
         margin: 0 auto 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $darkBlue;
 
         &__ul{
-            background-color: $darkBlue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,7 +14,7 @@
     
             li{
                 background-color: $darkBlue;
-                margin: 0.7rem 6.4rem;
+                margin: 0.7rem 5.4rem;
 
                 a{
                     transition: all 0.3s linear;
@@ -28,12 +27,16 @@
         }
     }
 
+.header{
+    height: 86vh;
+    position: relative;
+
     
     &__scroll{        
         position: absolute;
         left: 50%;
         bottom: 0%;
-        transform: translate(-50%,-25%);
+        transform: translate(-50%,-50%);
         display: flex;
         align-items: flex-end;
 
@@ -184,7 +187,7 @@
         }
     }
 
-    .header__menu{
+    .nav__menu{
         width: 100%;
         margin-bottom: 50px;
         
@@ -199,7 +202,6 @@
         margin: 50px
     }  
     .header{
-        height: 85vh;
         
         &::after{            
             width: 240px;
@@ -230,19 +232,18 @@
 }
 
 @media screen and (max-width: 650px){
+    .nav__menu{
+        margin-bottom: 20px;
+
+        &__ul li{
+            margin: 15px 25px;
+        }
+    }
     .header{
-        height: 100vh;
+        height: 89vh;
 
         &::after{            
             display: none;
-        }
-
-        &__menu{
-            margin-bottom: 20px;
-
-            &__ul li{
-                margin: 15px 25px;
-            }
         }
 
         &__banner{

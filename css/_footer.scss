@@ -4,10 +4,15 @@ footer{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    .f-logo{
+        margin-right: 50px;
+        padding: 10px;
+    }
     
     .f-left{
         padding: 10px;
-        margin-right: 50px;
+        margin: 0 50px;
 
         p{
             text-transform: uppercase;
@@ -45,18 +50,31 @@ footer{
 
 @media screen and (max-width: 650px){
     footer{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .f-logo{
+            width: 100%;
+            margin-right: 25px;
+            display: block;
+        }
+
         .f-left{
-            margin-right: 0px;
+            margin: 20px 0px 0px 0px;
 
             span, p{
                 font-size: 16px;
             }
         }
         .f-right{
-            margin-left: 25px;
+            margin: 20px 0px 0px 0px;
 
             span, p{
                 font-size: 16px;
+            }
+
+            p{
+                margin-bottom: 20px;
             }
         }
     }

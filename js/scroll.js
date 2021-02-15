@@ -3,7 +3,6 @@ const tl2 = gsap.timeline({defaults: {ease: "power1.out"}});
 const lineProjet = document.querySelectorAll('.projet__line');
 const projet = document.querySelectorAll('.projet');
 
-
 tl
     .fromTo(".header__banner__text p", {opacity: "0%", duration: 0.7, y:"-50px"},{opacity: "100%", duration: 1.5, y:"0px"})
     .to(".header__banner__text--hide--txt", {y: "0%", opacity: 1, duration: 1.2, stagger: 0.25}, "-=0.5")
@@ -109,7 +108,7 @@ lineProjet.forEach(line =>{
         markers: true,
         start: "top center"
         },
-        x: "-50px",
+        x: "50px",
         duration: 2,
         ease: "Power3.easeInOut" ,
         opacity: 0

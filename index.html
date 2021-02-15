@@ -9,17 +9,20 @@
     <title>Portfolio Julien Cantenot</title>
 </head>
 <body>
+    <!-- Menu -->
+    <nav class="nav__menu" id="logo-portfolio">
+        <div class="nav__menu__logo" >
+            <a href=""><img src="/img/logo-portfolio.svg" alt="logo portfolio"></a>
+        </div>
+        <ul class="nav__menu__ul">
+            <li><a href="#aPropos">A propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Fin du menu -->
     <!-- Section banner hero -->
     <header class="header">
-        <!-- Menu -->
-        <nav class="header__menu">
-            <ul class="header__menu__ul">
-                <li><a href="#">Compétences</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Fin du menu -->
 
         <!-- Header -->
         <div class="header__banner">
@@ -95,7 +98,7 @@
     <div class="separateur"></div>
 
     <!-- Section A propos -->
-    <section class="about">
+    <section class="about" id="aPropos">
         <h2 class="titleAnim about__title">A propos</h2>
         <div class="lineAnim about__line"></div>
 
@@ -196,39 +199,40 @@
     <div class="separateur"></div>
 
     <!-- Projets -->
-    <section class="projets">
+    <section class="projets" id="projets">
         <h2 class="titleAnim projets__title">Projets</h2>
         <div class="lineAnim projets__line"></div>
 
         <div class="projet">
             <div class="projet__line"></div>
             <div class="projet__contenu">
-                <span>Maquette - intégration</span>
+                <span>Maquette - Intégration</span>
                 <h4>Refonte complète d'un site internet</h4>
                 <p>Benchmarking, moodboard, personas, maquettes, intégration html, css, javascript puis création d'un thème personnalisé et intégration sous le CMS Wordpress.</p>
                 <button class="btn">Découvrir le projet</button>
             </div>
-            <img src="/img/Couleurs-d-ici.jpg" alt="image banniere projet refonte site">
+            <img src="/img/projet-photographie-besancon.jpg" alt="banniere projet refonte site photographie-besancon">
         </div>
         <div class="projet">
             <div class="projet__line"></div>
             <div class="projet__contenu">
-                <span>Maquette - intégration</span>
-                <h4>Refonte complète d'un site internet</h4>
-                <p>Benchmarking, moodboard, personas, maquettes, intégration html, css, javascript puis création d'un thème personnalisé et intégration sous le CMS Wordpress.</p>
+                <span>Intégration</span>
+                <h4>Page collection Couleurs d’ICI 
+                    V33</h4>
+                <p>Intégration html, css, javascript d’un page collection d’une nouvelle gamme de la marque V33 sous le CMS Magento 1</p>
                 <button class="btn">Découvrir le projet</button>
             </div>
-            <img src="/img/Couleurs-d-ici.jpg" alt="image banniere projet refonte site">
+            <img src="/img/Couleurs-d-ici.jpg" alt="banniere projet page couleurs d'ici">
         </div>
         <div class="projet">
             <div class="projet__line"></div>
             <div class="projet__contenu">
-                <span>Maquette - intégration</span>
-                <h4>Refonte complète d'un site internet</h4>
-                <p>Benchmarking, moodboard, personas, maquettes, intégration html, css, javascript puis création d'un thème personnalisé et intégration sous le CMS Wordpress.</p>
+                <span>Templating - Intégration</span>
+                <h4>Intégration page Nos Couleurs du site libéron.fr</h4>
+                <p>Création du template de la page et intégration html, css, javascript de la page Nos couleurs du site de la marque Libéron sous le CMS Wordpress.</p>
                 <button class="btn">Découvrir le projet</button>
             </div>
-            <img src="/img/Couleurs-d-ici.jpg" alt="image banniere projet refonte site">
+            <img src="/img/projet-page-nos-couleurs-liberon.jpg" alt="projet page nos couleurs liberon">
         </div>
     </section>
         <!-- Fin section projets -->
@@ -236,7 +240,7 @@
         <div class="separateur"></div>
 
         <!-- Contact -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="titleAnim contact__title">Contact</h2>
             <div class="lineAnim contact__line"></div>
 
@@ -249,6 +253,11 @@
 
         <!-- Footer -->
         <footer>
+            <div class="f-logo">
+                <a href="#logo-portfolio">
+                    <img src="/img/logo-portfolio.svg" alt="logo portfolio">
+                </a>
+            </div>
             <div class="f-left">
                 <p>Julien Cantenot</p>
                 <span>Intégrateur / Webdesigner</span>

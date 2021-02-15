@@ -172,6 +172,18 @@
             display: none;
         }
     }
+
+    .about__skills{
+        .box{
+            &__technos{
+                margin: 0 15px;
+            }
+
+            &__el{
+                margin: 8px;
+            }
+        }
+    }
 }
 
 
